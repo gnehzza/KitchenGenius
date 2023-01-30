@@ -1,10 +1,22 @@
 import "./styles.css";
+import { firebase, getFirestoreDB, getFirebaseAuth } from "./api/firebase";
+import { genSignIn } from "./api/auth";
 
 export default function App() {
+  const db = getFirestoreDB(firebase);
+  const auth = getFirebaseAuth(firebase);
+
   return (
     <div className="App">
-      <h1>Hello CodeSandbox 7564</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <div>
+        <button
+          onClick={async () => {
+            await genSignIn(auth, db);
+          }}
+        >
+          Sign In with Google
+        </button>
+      </div>
     </div>
   );
 }
