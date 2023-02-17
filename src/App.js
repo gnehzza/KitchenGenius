@@ -14,7 +14,7 @@ export default function App() {
             await genSignIn(auth, db);
           }}
         >
-          Sign In with Google
+          Sign In with Smoogle
         </button>
       </div>
     </div>
