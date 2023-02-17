@@ -14,7 +14,7 @@ export default function App() {
             await genSignIn(auth, db);
           }}
         >
-          Sign In with Smoogle
+          Sign In with Smoogle HIII
         </button>
       </div>
     </div>
